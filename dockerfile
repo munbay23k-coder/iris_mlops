@@ -15,7 +15,7 @@ COPY . .
 
 RUN uv sync --locked --no-dev
 
-ENV PATH="/app/.venv/Scripts:$PATH"
+ENV PATH="/app/.venv/bin:$PATH"
 
 RUN uv run preparar-datos && uv run entrenar
 
